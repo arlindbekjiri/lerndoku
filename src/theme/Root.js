@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
+import React, { useEffect } from "react";
+import ExecutionEnvironment from "@docusaurus/ExecutionEnvironment";
 
 export default function Root({ children }) {
   useEffect(() => {
@@ -11,19 +11,19 @@ export default function Root({ children }) {
     const sendThemeToParent = () => {
       if (window.parent !== window) {
         const html = document.documentElement;
-        const currentTheme = html.getAttribute('data-theme') || 'light';
+        const currentTheme = html.getAttribute("data-theme") || "light";
 
         try {
           window.parent.postMessage(
             {
-              type: 'DOCUSAURUS_THEME_CHANGE',
-              theme: currentTheme
+              type: "DOCUSAURUS_THEME_CHANGE",
+              theme: currentTheme,
             },
-            '*'
+            "*",
           );
-          console.log('✅ Theme sent to parent:', currentTheme);
+          console.log("✅ Theme sent to parent:", currentTheme);
         } catch (error) {
-          console.log('❌ Could not send theme to parent:', error);
+          console.log("❌ Could not send theme to parent:", error);
         }
       }
     };
@@ -35,7 +35,10 @@ export default function Root({ children }) {
     const html = document.documentElement;
     const observer = new MutationObserver((mutations) => {
       mutations.forEach((mutation) => {
-        if (mutation.type === 'attributes' && mutation.attributeName === 'data-theme') {
+        if (
+          mutation.type === "attributes" &&
+          mutation.attributeName === "data-theme"
+        ) {
           sendThemeToParent();
         }
       });
@@ -43,7 +46,7 @@ export default function Root({ children }) {
 
     observer.observe(html, {
       attributes: true,
-      attributeFilter: ['data-theme']
+      attributeFilter: ["data-theme"],
     });
 
     // Cleanup
