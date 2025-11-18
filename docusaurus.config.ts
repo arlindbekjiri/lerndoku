@@ -10,8 +10,8 @@ const config: Config = {
   tagline: "",
   favicon: "img/favicon.ico",
 
-  url: `https://${ORG_NAME}.github.io`, // e.g. "https://my-username.github.io"
-  baseUrl: `/${REPO_NAME}/`, // e.g. "/my-repo/"
+  url: "https://doku.arlindbekjiri.com", // Custom domain
+  baseUrl: "/", // Root path for custom domain
 
   organizationName: ORG_NAME, // e.g. "my-username"
   projectName: REPO_NAME, // e.g. "my-repo"
