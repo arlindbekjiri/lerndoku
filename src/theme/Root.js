@@ -1,27 +1,56 @@
 import React, { useEffect } from 'react';
-import { useColorMode } from '@docusaurus/theme-common';
+import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
 
 export default function Root({ children }) {
-  const { colorMode } = useColorMode();
-
   useEffect(() => {
-    // Send theme change to parent window (Portfolio)
-    if (window.parent !== window) {
-      try {
-        window.parent.postMessage(
-          {
-            type: 'DOCUSAURUS_THEME_CHANGE',
-            theme: colorMode
-          },
-          'https://arlindbekjiri.com' // Your portfolio domain
-        );
-
-        console.log('Theme message sent to parent:', colorMode);
-      } catch (error) {
-        console.log('Could not send theme to parent:', error);
-      }
+    // Only run in browser, not during SSG
+    if (!ExecutionEnvironment.canUseDOM) {
+      return;
     }
-  }, [colorMode]);
+
+    const sendThemeToParent = () => {
+      if (window.parent !== window) {
+        const html = document.documentElement;
+        const currentTheme = html.getAttribute('data-theme') || 'light';
+
+        try {
+          window.parent.postMessage(
+            {
+              type: 'DOCUSAURUS_THEME_CHANGE',
+              theme: currentTheme
+            },
+            '*'
+          );
+          console.log('✅ Theme sent to parent:', currentTheme);
+        } catch (error) {
+          console.log('❌ Could not send theme to parent:', error);
+        }
+      }
+    };
+
+    // Send initial theme
+    sendThemeToParent();
+
+    // Watch for theme changes on <html> element
+    const html = document.documentElement;
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.type === 'attributes' && mutation.attributeName === 'data-theme') {
+          sendThemeToParent();
+        }
+      });
+    });
+
+    observer.observe(html, {
+      attributes: true,
+      attributeFilter: ['data-theme']
+    });
+
+    // Cleanup
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
 
   return <>{children}</>;
 }
