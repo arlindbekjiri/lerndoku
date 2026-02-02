@@ -79,7 +79,7 @@ QSA). Ausserdem alle die schon mal gehackt wurden egal wie klein.
 
 Hier reicht meist ein Self-Assessment Questionnaire (SAQ). Vierteljährliche Netzwerk-Scans sind dennoch erforderlich.
 
-*Hinweis: Acquiring-Banken können unabhängig vom Level zusätzliche Anforderungen stellen.*
+_Hinweis: Acquiring-Banken können unabhängig vom Level zusätzliche Anforderungen stellen._
 
 ## Wichtige Begriffe (die immer auftauchen)
 
