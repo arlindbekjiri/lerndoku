@@ -12,6 +12,7 @@ PostgreSQL ist eine sehr gute Datenbank die praktisch überall läuft. Open sour
 - Trigger und gespeicherte Prozeduren
 
 ## Installation
+
 ### macOS
 
 ```bash
@@ -238,7 +239,7 @@ GROUP BY alter
 HAVING COUNT(*) > 1;
 
 -- Weitere Aggregatfunktionen
-SELECT 
+SELECT
     AVG(alter) as durchschnittsalter,
     MIN(alter) as juengster,
     MAX(alter) as aeltester,
@@ -256,7 +257,7 @@ JOIN bestellungen best ON b.id = best.benutzer_id;
 CREATE INDEX idx_benutzer_email ON benutzer(email);
 
 -- Zusammengesetzter Index
-CREATE INDEX idx_bestellungen_benutzer_datum 
+CREATE INDEX idx_bestellungen_benutzer_datum
 ON bestellungen(benutzer_id, bestellt_am);
 
 -- Unique Index
@@ -369,7 +370,7 @@ COMMIT;   -- Änderungen speichern
 
 ```sql
 -- Text-Manipulation
-SELECT 
+SELECT
     UPPER(name),           -- Grossbuchstaben
     LOWER(email),          -- Kleinbuchstaben
     LENGTH(name),          -- Länge
@@ -401,7 +402,7 @@ FROM benutzer;
 ### Schema-Design
 
 - Primary Keys definieren für alle Tabellen
-- NOT NULL Constraints setzten wo nötig 
+- NOT NULL Constraints setzten wo nötig
 - Foreign Keys nutzen für Datenintegrität
 
 ### Performance
