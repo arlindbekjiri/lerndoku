@@ -5,7 +5,8 @@ sidebar_position: 1
 
 # Swift Grundlagen
 
-Swift ist eine moderne Programmiersprache von Apple, die für die Entwicklung von Apps auf iOS, macOS, watchOS und tvOS verwendet wird.
+Swift ist eine moderne Programmiersprache von Apple, die für die Entwicklung von Apps auf iOS, macOS, watchOS und tvOS
+verwendet wird.
 
 ## Installation & Setup
 
@@ -114,7 +115,7 @@ default:
 
 ```swift
 // For-In Loop
-for i in 1...5 {
+for i in 1 ... 5 {
     print("Zahl: \(i)")
 }
 
@@ -149,16 +150,19 @@ print(greeting)
 
 ```swift
 // Mehrere Parameter
+
 func add(a: Int, b: Int) -> Int {
     return a + b
 }
 
 // Ohne Return Value
+
 func printMessage(_ message: String) {
     print(message)
 }
 
 // Default Parameter
+
 func greet(name: String = "Welt") -> String {
     return "Hallo, \(name)!"
 }
@@ -180,6 +184,7 @@ if let name = optionalName {
 }
 
 // Guard Statement
+
 func processUser(name: String?) {
     guard let userName = name else {
         print("Ungültiger Name")
