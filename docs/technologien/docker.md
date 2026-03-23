@@ -434,3 +434,23 @@ docker exec <container_id> ping <host>
 # Speicherplatz bereinigen
 docker system prune -a
 ```
+
+## Workshop
+
+Als Teil meiner Lehrzeit habe ich einen **Docker Workshop** für Entwickler konzipiert und durchgeführt. Ziel war es, Docker-Grundlagen praxisnah und verständlich zu vermitteln.
+
+### Inhalt des Workshops
+
+- Container vs. VM — Grundkonzepte
+- Images, Container, Registries
+- Dockerfile schreiben & Images bauen
+- Docker Compose für Multi-Container-Apps
+- 3 Hands-on Übungen mit eigenem Setup
+
+### Materialien
+
+Die Workshop-Materialien (Präsentation, Übungen, Cheatsheet) sind öffentlich verfügbar:
+
+**[Docker Workshop Materialien](https://www.arlindbekjiri.com/docker-workshop)**
+
+> Dieser Workshop wurde für Einsteiger ohne Docker-Vorkenntnisse konzipiert und umfasst ca. 1.5–2 Stunden mit praktischen Übungen.
