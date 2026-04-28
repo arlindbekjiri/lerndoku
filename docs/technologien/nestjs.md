@@ -52,7 +52,15 @@ export class UsersModule {}
 Controller nehmen HTTP-Anfragen entgegen und geben Antworten zurück.
 
 ```typescript
-import { Controller, Get, Post, Body, Param, Delete, Put } from "@nestjs/common";
+import {
+  Controller,
+  Get,
+  Post,
+  Body,
+  Param,
+  Delete,
+  Put,
+} from "@nestjs/common";
 import { UsersService } from "./users.service";
 
 @Controller("users")
@@ -233,7 +241,7 @@ import { Repository } from "typeorm";
 export class UsersService {
   constructor(
     @InjectRepository(User)
-    private usersRepository: Repository<User>
+    private usersRepository: Repository<User>,
   ) {}
 
   findAll() {
@@ -296,16 +304,21 @@ findOne(@Param("id", ParseIntPipe) id: number) {
 ## Interceptors
 
 ```typescript
-import { Injectable, NestInterceptor, ExecutionContext, CallHandler } from "@nestjs/common";
+import {
+  Injectable,
+  NestInterceptor,
+  ExecutionContext,
+  CallHandler,
+} from "@nestjs/common";
 import { Observable, tap } from "rxjs";
 
 @Injectable()
 export class LoggingInterceptor implements NestInterceptor {
   intercept(context: ExecutionContext, next: CallHandler): Observable<any> {
     const start = Date.now();
-    return next.handle().pipe(
-      tap(() => console.log(`Request dauerte ${Date.now() - start}ms`))
-    );
+    return next
+      .handle()
+      .pipe(tap(() => console.log(`Request dauerte ${Date.now() - start}ms`)));
   }
 }
 ```

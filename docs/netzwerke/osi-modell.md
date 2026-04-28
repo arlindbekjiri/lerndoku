@@ -56,11 +56,11 @@ Stellt eine Verbindung zwischen zwei Endgeräten her und sorgt dafür dass Daten
 
 ### TCP vs UDP
 
-| | TCP | UDP |
-|---|---|---|
-| Verbindung | Verbindungsorientiert | Verbindungslos |
-| Zuverlässigkeit | Garantiert | Keine Garantie |
-| Verwendung | HTTP, FTP, E-Mail | Streaming, DNS, Gaming |
+|                 | TCP                   | UDP                    |
+| --------------- | --------------------- | ---------------------- |
+| Verbindung      | Verbindungsorientiert | Verbindungslos         |
+| Zuverlässigkeit | Garantiert            | Keine Garantie         |
+| Verwendung      | HTTP, FTP, E-Mail     | Streaming, DNS, Gaming |
 
 ## Schicht 5 - Sitzungsschicht
 
@@ -92,13 +92,13 @@ Protokolle: HTTP, HTTPS, FTP, SMTP, IMAP, DNS, SSH
 
 ## Dateneinheiten pro Schicht
 
-| Schicht | Bezeichnung |
-|---|---|
-| 7-5 | Daten |
-| 4 | Segment (TCP) / Datagramm (UDP) |
-| 3 | Paket |
-| 2 | Frame |
-| 1 | Bits |
+| Schicht | Bezeichnung                     |
+| ------- | ------------------------------- |
+| 7-5     | Daten                           |
+| 4       | Segment (TCP) / Datagramm (UDP) |
+| 3       | Paket                           |
+| 2       | Frame                           |
+| 1       | Bits                            |
 
 ## Ablauf einer HTTPS-Anfrage
 
@@ -131,16 +131,16 @@ OSI                     TCP/IP
 
 ## Wichtige Ports
 
-| Port | Protokoll | Verwendung |
-|---|---|---|
-| 20, 21 | FTP | Dateiübertragung |
-| 22 | SSH | Sichere Remote-Verbindung |
-| 25 | SMTP | E-Mail senden |
-| 53 | DNS | Domainauflösung |
-| 80 | HTTP | Webseiten |
-| 443 | HTTPS | Webseiten verschlüsselt |
-| 3306 | MySQL | Datenbank |
-| 5432 | PostgreSQL | Datenbank |
+| Port   | Protokoll  | Verwendung                |
+| ------ | ---------- | ------------------------- |
+| 20, 21 | FTP        | Dateiübertragung          |
+| 22     | SSH        | Sichere Remote-Verbindung |
+| 25     | SMTP       | E-Mail senden             |
+| 53     | DNS        | Domainauflösung           |
+| 80     | HTTP       | Webseiten                 |
+| 443    | HTTPS      | Webseiten verschlüsselt   |
+| 3306   | MySQL      | Datenbank                 |
+| 5432   | PostgreSQL | Datenbank                 |
 
 ## Ressourcen
 

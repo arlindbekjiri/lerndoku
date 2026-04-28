@@ -39,7 +39,7 @@ function Gruss({ name }: { name: string }) {
 }
 
 // Verwendung
-<Gruss name="Arlind" />
+<Gruss name="Arlind" />;
 ```
 
 ## JSX

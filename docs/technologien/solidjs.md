@@ -103,7 +103,7 @@ function UserCard(props: Props) {
 }
 
 // Verwendung
-<UserCard name="Arlind" age={25} />
+<UserCard name="Arlind" age={25} />;
 ```
 
 In SolidJS Props nicht destructuren, das bricht die Reaktivität. Stattdessen `props.name` verwenden.
@@ -130,7 +130,7 @@ import { Show } from "solid-js";
 
 <Show when={isLoggedIn()} fallback={<p>Bitte einloggen</p>}>
   <p>Willkommen zurück</p>
-</Show>
+</Show>;
 ```
 
 ### For
@@ -140,9 +140,7 @@ import { For } from "solid-js";
 
 const [items, setItems] = createSignal(["Apfel", "Banane", "Orange"]);
 
-<For each={items()}>
-  {(item) => <li>{item}</li>}
-</For>
+<For each={items()}>{(item) => <li>{item}</li>}</For>;
 ```
 
 ### Switch / Match
@@ -154,7 +152,7 @@ import { Switch, Match } from "solid-js";
   <Match when={status() === "loading"}>Lädt...</Match>
   <Match when={status() === "error"}>Fehler</Match>
   <Match when={status() === "success"}>Fertig</Match>
-</Switch>
+</Switch>;
 ```
 
 ## Stores
