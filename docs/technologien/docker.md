@@ -1,3 +1,8 @@
+---
+title: Docker
+sidebar_position: 8
+---
+
 # Docker
 
 Docker ist eine Plattform, mit der man Anwendungen in sogenannten Containern entwickeln, bereitstellen und ausführen kann. Die Container sind einfach, schnell und unabhängig vom System, auf dem sie laufen.

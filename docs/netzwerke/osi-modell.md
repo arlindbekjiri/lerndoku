@@ -1,3 +1,8 @@
+---
+title: OSI-Modell
+sidebar_position: 1
+---
+
 # OSI-Modell
 
 Das OSI-Modell (Open Systems Interconnection) ist ein Referenzmodell, das beschreibt wie Netzwerkkommunikation funktioniert. Es teilt die Kommunikation in 7 Schichten auf, damit verschiedene Systeme und Hersteller miteinander kommunizieren können.

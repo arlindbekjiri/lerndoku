@@ -1,3 +1,8 @@
+---
+title: PostgreSQL
+sidebar_position: 5
+---
+
 # PostgreSQL
 
 PostgreSQL ist eine sehr gute Datenbank die praktisch überall läuft. Open source, stabil und hat viele nützliche Features. Besonders praktisch ist der JSON-Support.

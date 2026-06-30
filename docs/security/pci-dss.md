@@ -1,3 +1,8 @@
+---
+title: PCI DSS
+sidebar_position: 1
+---
+
 # PCI DSS Notizen
 
 ## Was ist das eigentlich?

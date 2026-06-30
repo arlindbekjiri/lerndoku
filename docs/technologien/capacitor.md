@@ -1,3 +1,8 @@
+---
+title: Capacitor
+sidebar_position: 7
+---
+
 # Capacitor
 
 Capacitor ist ein Open-Source-Tool, mit dem man Web-Apps relativ einfach in echte native Mobile-Apps verwandeln kann – für iOS, Android und sogar den Desktop.

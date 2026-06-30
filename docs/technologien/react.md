@@ -1,3 +1,8 @@
+---
+title: React
+sidebar_position: 2
+---
+
 # React
 
 React ist eine JavaScript-Bibliothek von Meta für den Aufbau von Benutzeroberflächen. Die UI wird in wiederverwendbare Komponenten aufgeteilt, die sich automatisch aktualisieren wenn sich die Daten ändern.

@@ -1,3 +1,8 @@
+---
+title: TypeORM
+sidebar_position: 6
+---
+
 # TypeORM
 
 TypeORM ist ein Object-Relational Mapping (ORM) Framework für TypeScript und JavaScript, das mit verschiedenen Datenbanken arbeitet. Es ermöglicht die Arbeit mit Datenbanken auf einer höheren Abstraktionsebene durch die Verwendung von Klassen und Objekten.

@@ -1,3 +1,8 @@
+---
+title: SolidJS
+sidebar_position: 3
+---
+
 # SolidJS
 
 SolidJS ist ein JavaScript-Framework für Benutzeroberflächen. Es sieht React ähnlich aus, funktioniert aber komplett anders. Statt Virtual DOM verwendet es feinkörnige Reaktivität.
